@@ -19,7 +19,7 @@ const PaginationControls: FC<PaginationControlsProps> = ({
   hasPrevPage,
 }) => {
   return (
-    <div className="flex gap-2">
+    <div className="flex gap-4  ml-auto mr-auto mt-10 w-20">
       <button onClick={prevPage} disabled={!hasPrevPage}>
         Prev
       </button>
