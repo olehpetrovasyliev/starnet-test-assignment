@@ -22,18 +22,11 @@ export default function PaginatedCharactersList() {
   }, [page]);
   return (
     <>
-      <ul className="flex flex-wrap gap-12">
-        {characters.map((character: Character) => (
+      <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+        {characters.map((character) => (
           <li key={character.id} className="p-4 border rounded-lg shadow-md">
             <h2 className="text-xl font-bold">{character.name}</h2>
-            <div className="mt-2">
-              {Object.entries(character).map(([key, value]) => (
-                <div key={key} className="mb-1">
-                  <strong>{key}:</strong>{" "}
-                  {Array.isArray(value) ? value.join(", ") : value}
-                </div>
-              ))}
-            </div>
+            <div className="mt-2"></div>
           </li>
         ))}
       </ul>
