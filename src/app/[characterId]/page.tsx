@@ -109,10 +109,10 @@ const CharacterPage: FC<CharacterPageProps> = async ({ params }) => {
           {character.name}
         </h1>
         <div className="mb-8 bg-gray-900 p-6 rounded-lg shadow-lg">
-          <h2 className="text-2xl font-bold mb-5 text-center">
+          <h2 className="text-2xl font-bold mb-7 text-center">
             Character Details
           </h2>
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 gap-4 place-items-center">
             <p>
               <strong>Height:</strong> {character.height} cm
             </p>
@@ -149,9 +149,9 @@ const CharacterPage: FC<CharacterPageProps> = async ({ params }) => {
             edges={edges}
             style={rfStyle}
             defaultViewport={{
-              x: 0,
+              x: 200,
               y: 50,
-              zoom: 1,
+              zoom: 1.5,
             }}
           >
             <Background />
