@@ -42,7 +42,7 @@ export type Character = {
   url: string;
 };
 
-export type CharactersArr = Starship[];
+export type CharactersArr = Character[];
 
 export type Planet = {
   id: number;

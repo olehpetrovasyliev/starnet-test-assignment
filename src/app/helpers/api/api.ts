@@ -38,3 +38,9 @@ export const getAllFilms = (params: {}): Promise<ApiPaginatedRes<FilmsArr>> =>
 
 export const getFilmById = (id: number): Promise<Film> =>
   instance.get(`/films/${id}`).then((res) => res.data);
+
+export const getAllPlanets = (params: {}): Promise<PlanetsArr> =>
+  instance.get("/planets", { params: { ...params } }).then((res) => res.data);
+
+export const getPlanetById = (id: number): Promise<Planet> =>
+  instance.get(`/planets/${id}`).then((res) => res.data);

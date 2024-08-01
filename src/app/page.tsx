@@ -3,7 +3,7 @@ import { getAllCharacters } from "./helpers/api/api";
 import { Character } from "./helpers/types";
 import Link from "next/link";
 import PaginationControls from "./Components/PaginationControls";
-import PaginatedCharactersList from "./Components/CharactersList";
+import PaginatedCharactersList from "./Components/MoreCharactersList";
 
 export default async function Home() {
   const charactersRes = await getAllCharacters(1);
