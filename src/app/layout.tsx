@@ -33,7 +33,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${roboto.className} ${starJedi.variable} h-max`}>
+      <body
+        className={`${roboto.className} ${starJedi.variable} h-max bg-hero-bg bg-cover bg-center bg-fixed`}
+      >
         {children}
       </body>
     </html>

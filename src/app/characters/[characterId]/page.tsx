@@ -104,7 +104,7 @@ const CharacterPage: FC<CharacterPageProps> = async ({ params }) => {
 
   return (
     <main>
-      <section className="py-8">
+      <section className="py-12 ">
         <div className="h-screen text-white">
           <div className="container mx-auto py-8 px-4">
             <h1 className="text-4xl font-bold mb-8 text-center font-jedi">
@@ -145,7 +145,7 @@ const CharacterPage: FC<CharacterPageProps> = async ({ params }) => {
               Films And Starships Flow
             </h2>
 
-            <div className="relative w-full h-[600px] bg-black rounded-lg shadow-lg overflow-hidden">
+            <div className="relative w-full h-[600px] bg-black rounded-lg shadow-lg overflow-hidden mb-12">
               <ReactFlow
                 nodes={nodes}
                 edges={edges}

@@ -3,8 +3,8 @@ import Link from "next/link";
 export default function Home() {
   return (
     <main className="">
-      <section>
-        <div className="flex flex-col items-center justify-center min-h-screen bg-black text-white">
+      <section className="">
+        <div className="flex flex-col items-center justify-center min-h-screen  text-white ">
           <h1 className="text-4xl font-bold text-yellow-400 mb-8 text-center font-jedi">
             Welcome to the Star Wars Characters Database
           </h1>
