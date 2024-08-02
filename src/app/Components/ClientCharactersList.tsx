@@ -30,7 +30,9 @@ const ClientSideCharacters: React.FC<ClientSideCharactersProps> = ({
 
   return (
     <>
-      <h1 className="text-4xl text-center mb-7 font-bold">Characters List</h1>
+      <h1 className="text-3xl text-center mb-9 font-bold font-jedi  ">
+        Characters List
+      </h1>
 
       <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         {characters.map((character) => (
@@ -38,8 +40,8 @@ const ClientSideCharacters: React.FC<ClientSideCharactersProps> = ({
             key={character.id}
             className="p-4 border border-yellow-400 rounded-lg shadow-md bg-black text-white transition-transform transform hover:scale-105 text-center"
           >
-            <Link href={`/${character.id}`}>
-              <h2 className="text-xl font-bold text-center mb-2 text-yellow-400">
+            <Link href={`/characters/${character.id}`}>
+              <h2 className="text-xl font-bold text-center mb-2 text-yellow-400 ">
                 {character.name}
               </h2>
               <p className="text-sm">Gender: {character.gender}</p>

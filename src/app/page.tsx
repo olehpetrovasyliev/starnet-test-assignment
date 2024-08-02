@@ -1,22 +1,26 @@
-import Image from "next/image";
-import { getAllCharacters } from "./helpers/api/api";
-import { Character } from "./helpers/types";
 import Link from "next/link";
-import PaginationControls from "./Components/PaginationControls";
-import PaginatedCharactersList from "./Components/ClientCharactersList";
-import CharacterList from "./Components/CharactersList";
 
-export default async function Home() {
-  const charactersRes = await getAllCharacters(1);
-  // const charactersArr = charactersRes.results;
-  // const isCharactersNext = charactersRes.next !== null;
-  // const isCharactersPrev = charactersRes.previous !== null;
-
+export default function Home() {
   return (
     <main className="">
-      <section className="py-12">
-        <div className="container ml-auto mr-auto">
-          <CharacterList />
+      <section>
+        <div className="flex flex-col items-center justify-center min-h-screen bg-black text-white">
+          <h1 className="text-4xl font-bold text-yellow-400 mb-8 text-center font-jedi">
+            Welcome to the Star Wars Characters Database
+          </h1>
+          <div className="max-w-lg">
+            <p className="text-lg text-center mb-8 ">
+              Here you can explore the vast universe of Star Wars characters,
+              discover detailed info of each character, and see flows of each
+              character, containing info about all the films and starships
+              retated to him
+            </p>
+          </div>
+          <Link href="/characters">
+            <p className="px-6 py-3 text-lg font-bold text-black bg-yellow-400 rounded-lg hover:bg-yellow-500 transition-colors">
+              View Characters
+            </p>
+          </Link>
         </div>
       </section>
     </main>

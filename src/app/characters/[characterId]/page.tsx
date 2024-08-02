@@ -5,7 +5,7 @@ import {
   getAllStarships,
   getCharacterById,
   getPlanetById,
-} from "../helpers/api/api";
+} from "../../helpers/api/api";
 import {
   ReactFlow,
   Node,
@@ -103,62 +103,66 @@ const CharacterPage: FC<CharacterPageProps> = async ({ params }) => {
   const homeworld = await getPlanetById(character.homeworld);
 
   return (
-    <div className="h-screen text-white">
-      <div className="container mx-auto py-8 px-4">
-        <h1 className="text-4xl font-bold mb-8 text-center">
-          {character.name}
-        </h1>
-        <div className="mb-8 bg-gray-900 p-6 rounded-lg shadow-lg">
-          <h2 className="text-2xl font-bold mb-7 text-center">
-            Character Details
-          </h2>
-          <div className="grid grid-cols-2 gap-4 place-items-center">
-            <p>
-              <strong>Height:</strong> {character.height} cm
-            </p>
-            <p>
-              <strong>Mass:</strong> {character.mass} kg
-            </p>
-            <p>
-              <strong>Hair Color:</strong> {character.hair_color}
-            </p>
-            <p>
-              <strong>Skin Color:</strong> {character.skin_color}
-            </p>
-            <p>
-              <strong>Eye Color:</strong> {character.eye_color}
-            </p>
-            <p>
-              <strong>Birth Year:</strong> {character.birth_year}
-            </p>
-            <p>
-              <strong>Gender:</strong> {character.gender}
-            </p>
-            <p>
-              <strong>Homeworld:</strong> {homeworld.name}
-            </p>
+    <main>
+      <section className="py-8">
+        <div className="h-screen text-white">
+          <div className="container mx-auto py-8 px-4">
+            <h1 className="text-4xl font-bold mb-8 text-center font-jedi">
+              {character.name}
+            </h1>
+            <div className="mb-8 bg-gray-900 p-6 rounded-lg shadow-lg">
+              <h2 className="text-2xl font-bold mb-7 text-center">
+                Character Details
+              </h2>
+              <div className="grid grid-cols-2 gap-4 place-items-center">
+                <p>
+                  <strong>Height:</strong> {character.height} cm
+                </p>
+                <p>
+                  <strong>Mass:</strong> {character.mass} kg
+                </p>
+                <p>
+                  <strong>Hair Color:</strong> {character.hair_color}
+                </p>
+                <p>
+                  <strong>Skin Color:</strong> {character.skin_color}
+                </p>
+                <p>
+                  <strong>Eye Color:</strong> {character.eye_color}
+                </p>
+                <p>
+                  <strong>Birth Year:</strong> {character.birth_year}
+                </p>
+                <p>
+                  <strong>Gender:</strong> {character.gender}
+                </p>
+                <p>
+                  <strong>Homeworld:</strong> {homeworld.name}
+                </p>
+              </div>
+            </div>
+            <h2 className="text-2xl font-bold mb-4 text-center">
+              Films And Starships Flow
+            </h2>
+
+            <div className="relative w-full h-[600px] bg-black rounded-lg shadow-lg overflow-hidden">
+              <ReactFlow
+                nodes={nodes}
+                edges={edges}
+                style={rfStyle}
+                defaultViewport={{
+                  x: 200,
+                  y: 50,
+                  zoom: 1.5,
+                }}
+              >
+                <Background />
+              </ReactFlow>
+            </div>
           </div>
         </div>
-        <h2 className="text-2xl font-bold mb-4 text-center">
-          Films And Starships Flow
-        </h2>
-
-        <div className="relative w-full h-[600px] bg-black rounded-lg shadow-lg overflow-hidden">
-          <ReactFlow
-            nodes={nodes}
-            edges={edges}
-            style={rfStyle}
-            defaultViewport={{
-              x: 200,
-              y: 50,
-              zoom: 1.5,
-            }}
-          >
-            <Background />
-          </ReactFlow>
-        </div>
-      </div>
-    </div>
+      </section>
+    </main>
   );
 };
 
