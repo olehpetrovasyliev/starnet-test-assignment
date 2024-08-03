@@ -38,6 +38,7 @@ const ClientSideCharacters: React.FC<ClientSideCharactersProps> = ({
         {characters.map((character) => (
           <li
             key={character.id}
+            data-testid={`character-${character.id}`}
             className="p-4 border border-yellow-400 rounded-lg shadow-md bg-black text-white transition-transform transform hover:scale-105 text-center"
           >
             <Link href={`/characters/${character.id}`}>
@@ -57,6 +58,8 @@ const ClientSideCharacters: React.FC<ClientSideCharactersProps> = ({
             onClick={loadMoreCharacters}
             className="px-6 py-2 text-lg font-bold text-black bg-yellow-400 rounded-lg hover:bg-yellow-500 focus:outline-none"
             disabled={isLoading}
+            type="button"
+            data-testid="loadMoreBtn"
           >
             {isLoading ? "Loading..." : "Load More"}
           </button>

@@ -6,14 +6,7 @@ import {
   getCharacterById,
   getPlanetById,
 } from "../../helpers/api/api";
-import {
-  ReactFlow,
-  Node,
-  Edge,
-  Background,
-  MiniMap,
-  Controls,
-} from "@xyflow/react";
+import { ReactFlow, Edge, Background } from "@xyflow/react";
 
 type CharacterPageProps = {
   params: {
