@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Star Wars Heroes Viewer
+
+## Overview
+
+This web application allows users to browse a list of Star Wars heroes and view detailed information about the movies and spaceships associated with each hero. Built using the latest version of Next.js, the application leverages Axios for API requests and React Flow for visualizing data in a graph format. The UI is styled with Tailwind CSS.
+
+## Features
+
+- **Heroes List**: Displays a paginated with "Load More" button list of Star Wars heroes retrieved from the `sw-api.starnavi.io` API.
+- **Hero Info**: Card with all the detailed information about hero.
+- **Hero Details**: On selecting a hero, displays a detailed graph with:
+  - The hero as the main node.
+  - Connections to movies the hero appears in.
+  - Connections from each movie to the spaceships the hero traveled on.
+
+## Technologies Used
+
+- **Framework**: Next.js
+- **API Requests**: Axios
+- **UI Library**: Tailwind CSS
+- **Graph Visualization**: React Flow
+- **Testing**: Vitest
 
 ## Getting Started
 
-First, run the development server:
+You can view the deployed version of this project on Vercel:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+[https://starnet-test-assignment.vercel.app/](https://starnet-test-assignment.vercel.app/)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Design Principles
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+This project adheres to the principles of SOLID, DRY, and KISS:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **SOLID**: Each component and function has a single responsibility, and the code is organized to be easily extendable and maintainable.
+- **DRY**: Repeated code is abstracted into reusable functions and components.
+- **KISS**: The implementation is kept simple and straightforward.
 
-## Learn More
+## Notes
 
-To learn more about Next.js, take a look at the following resources:
+- All comments and documentation are written in English.
+- Names of modules, classes, functions, and variables are descriptive and avoid abbreviations.
+- No API requests are made during test runs.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Author
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- [Oleh Vasyliev](https://github.com/olehpetrovasyliev)

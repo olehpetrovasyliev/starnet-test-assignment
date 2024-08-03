@@ -391,24 +391,13 @@ const mockFilms = [
 
 const mockData = { mockCharacter, mockStarships, mockPlanet, mockFilms };
 
-vi.mock("next/router", () => ({
-  useRouter: vi.fn(),
-}));
-
-vi.mock("next/navigation", () => ({
-  useRouter: () => ({
-    push: vi.fn(),
-    replace: vi.fn(),
-    prefetch: vi.fn(),
-  }),
-}));
-
 vi.mock("../helpers/api/api");
 
 vi.mock("@xyflow/react", () => ({
   ReactFlow: vi.fn(() => null),
   Background: vi.fn(() => null),
 }));
+
 describe("CharacterPage", () => {
   beforeEach(() => {
     vi.mocked(getCharacterById).mockResolvedValue(mockCharacter);
